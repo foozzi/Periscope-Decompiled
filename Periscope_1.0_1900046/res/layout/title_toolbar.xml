@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="?android:actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <o.amc android:id="@id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back" android:layout_centerVertical="true" android:tint="@color/bg_action_bar_pressable" style="@style/ToolbarBtn" />
+    <o.ami android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/indented_list_left_padding" android:layout_alignParentStart="true" style="@style/ToolbarTitle" />
+</RelativeLayout>

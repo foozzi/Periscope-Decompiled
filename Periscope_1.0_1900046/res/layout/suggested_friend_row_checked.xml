@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/suggested_row_container" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/standard_spacing_16" android:paddingBottom="@dimen/standard_spacing_16" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/profile_image_container" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height" android:layout_marginTop="@dimen/standard_spacing_16" android:layout_marginEnd="@dimen/standard_spacing_16">
+        <o.alm android:id="@id/profile_image" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height" android:maskType="oval" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/verified" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_verified" />
+    </FrameLayout>
+    <o.ami android:textSize="16.0sp" android:textColor="@color/dark_grey" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_spacing_16" android:layout_marginBottom="5.0dip" android:layout_toLeftOf="@id/follow" android:layout_toRightOf="@id/profile_image_container" android:font="fonts/MuseoSans-500.otf" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/byline_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/name" android:layout_alignLeft="@id/name">
+        <o.amc android:layout_gravity="center_vertical" android:id="@id/byline_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:src="@drawable/ic_heart_profile" android:tint="@color/bg_heart" />
+        <o.ami android:textSize="14.0sp" android:textColor="@color/dark_grey" android:id="@id/byline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:font="fonts/MuseoSans-300.otf" />
+    </LinearLayout>
+    <o.alx android:id="@id/follow" android:layout_marginTop="8.0dip" android:layout_alignParentRight="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" style="@style/IconButton" />
+    <o.ami android:textSize="13.0sp" android:textColor="@color/light_grey" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/byline_container" android:layout_alignLeft="@id/name" android:layout_marginEnd="32.0dip" android:font="fonts/MuseoSans-300.otf" />
+</RelativeLayout>

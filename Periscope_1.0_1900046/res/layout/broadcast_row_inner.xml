@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/featured_bar" android:background="@drawable/bg_featured_bar" android:visibility="gone" android:layout_width="4.0dip" android:layout_height="wrap_content" android:layout_alignTop="@id/thumb_container" android:layout_alignBottom="@id/thumb_container" />
+    <FrameLayout android:id="@id/thumb_container" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height" android:layout_marginLeft="@dimen/standard_spacing_16" android:layout_marginTop="@dimen/standard_spacing_16" android:layout_marginBottom="@dimen/standard_spacing_16" android:layout_alignParentTop="true">
+        <o.alm android:id="@id/thumb" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height" android:scaleType="center" />
+        <o.ami android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/thumb_live" android:background="@drawable/bg_thumb_live" android:visibility="gone" android:layout_width="@dimen/feed_row_height" android:layout_height="16.0dip" android:text="@string/live" android:font="fonts/MuseoSans-700.otf" />
+        <ImageView android:id="@id/thumb_replay" android:background="@drawable/bg_thumb_replay" android:visibility="gone" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height" android:src="@drawable/ic_play" android:scaleType="center" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/participant_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/author" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/standard_spacing_16">
+        <include layout="@layout/participant" />
+    </LinearLayout>
+    <o.ami android:textSize="14.0sp" android:textColor="@color/light_grey" android:id="@id/timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/author" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/standard_spacing_16" android:font="fonts/MuseoSans-700.otf" />
+    <o.ami android:textSize="16.0sp" android:textColor="@color/dark_grey" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/featured_lock_container" android:layout_toRightOf="@id/thumb_container" android:layout_alignTop="@id/thumb_container" android:layout_marginStart="@dimen/standard_spacing_16" android:layout_marginEnd="@dimen/standard_spacing_16" android:font="fonts/ProximaNova-Semibold.otf" />
+    <o.ami android:textSize="14.0sp" android:textColor="@color/light_grey" android:id="@id/author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="@dimen/standard_spacing_16" android:layout_below="@id/title" android:layout_alignLeft="@id/title" android:font="fonts/MuseoSans-300.otf" />
+    <FrameLayout android:id="@id/featured_lock_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/title" android:layout_alignParentRight="true" android:layout_marginEnd="@dimen/standard_spacing_16">
+        <o.ami android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/featured_label" android:background="@drawable/bg_featured" android:padding="@dimen/label_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/featured" android:font="fonts/MuseoSans-700.otf" />
+        <o.amc android:id="@id/lock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_private_small" android:tint="@color/bg_feed_icon" />
+    </FrameLayout>
+</merge>

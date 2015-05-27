@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<o.adw android:id="@id/root" android:background="@color/dark_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/preview_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <o.amk android:id="@id/preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" />
+        <o.aml android:id="@id/thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:layout_gravity="top" android:background="@drawable/bg_gradient_down_overlay" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+        <View android:layout_gravity="bottom" android:background="@drawable/bg_gradient_up_overlay" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+    </FrameLayout>
+    <o.amd android:id="@id/loading_animation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="236.0dip" />
+    <o.ami android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/loading_text" android:padding="@dimen/standard_spacing_16" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:font="fonts/MuseoSans-500.otf" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <o.afq android:id="@id/compose_comment_container" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="58.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="10.0dip" />
+        <o.ahe android:id="@id/hearts_view" android:layout_width="@dimen/heart_container_width" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/hearts_bottom_padding" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true" android:layout_alignParentEnd="true" />
+        <o.ahb android:id="@id/chats_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/standard_spacing_16" android:layout_above="@id/compose_comment_container" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/hearts_view" />
+    </RelativeLayout>
+    <o.amo android:layout_gravity="bottom" android:id="@id/progress_bar" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/progress_bar_height" />
+    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/btn_play_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play" style="@style/IconButton" />
+    <ImageView android:layout_gravity="end|center|top" android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close" style="@style/IconButton" />
+    <include android:layout_gravity="end|bottom|center" android:id="@id/participants" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/btn_participants" />
+    <RelativeLayout android:layout_gravity="start|center|top" android:id="@id/ended_container" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginStart="@dimen/activity_horizontal_margin">
+        <o.ami android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/ended_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ended_broadcast" android:layout_marginEnd="3.0dip" android:font="fonts/MuseoSans-700.otf" />
+        <o.ami android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/ended_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/ended_title" android:font="fonts/MuseoSans-300.otf" />
+    </RelativeLayout>
+    <o.aei android:id="@id/bottom_drag_child" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <o.alo android:id="@id/profile_sheet" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <o.ajw android:id="@id/user_picker_sheet" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <o.alf android:id="@id/action_sheet" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</o.adw>

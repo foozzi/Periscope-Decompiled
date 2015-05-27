@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="invited_num_followers">
+        <item quantity="other">%1$s invited %2$s people</item>
+        <item quantity="one">%1$s invited %2$s person</item>
+    </plurals>
+    <plurals name="invited_num_followers_embolden">
+        <item quantity="other">*%1$s* invited %2$s people</item>
+        <item quantity="one">*%1$s* invited %2$s person</item>
+    </plurals>
+    <plurals name="num_live_viewers">
+        <item quantity="other">%s live viewers</item>
+        <item quantity="one">%s live viewer</item>
+    </plurals>
+    <plurals name="num_replay_viewers">
+        <item quantity="other">%s replay viewers</item>
+        <item quantity="one">%s replay viewer</item>
+    </plurals>
+    <plurals name="recents">
+        <item quantity="other">%s Recents</item>
+        <item quantity="one">%s Recent</item>
+    </plurals>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="153.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">>
+<RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <o.ami android:textSize="16.0sp" android:textColor="@color/light_grey" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/broadcast_empty" android:layout_centerHorizontal="true" android:font="fonts/MuseoSans-300.otf" />
+        <o.ami android:textSize="12.0sp" android:textColor="@color/light_blue" android:id="@id/broadcast_empty_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/broadcast_empty_subtitle_caps" android:layout_below="@id/title" android:layout_centerHorizontal="true" android:font="fonts/MuseoSans-500.otf" />
+    </RelativeLayout>
+</FrameLayout>

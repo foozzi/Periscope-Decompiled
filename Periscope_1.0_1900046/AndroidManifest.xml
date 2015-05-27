@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="tv.periscope.android" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="tv.periscope.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="tv.periscope.android.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <application android:allowBackup="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="o.vf" android:theme="@style/AppTheme">
+        <service android:exported="false" android:name="o.acw"/>
+        <meta-data android:name="LOCALYTICS_APP_KEY" android:value="2eb116f2dc0ddf5eb65c7a7-e87a2318-fdee-11e4-3f82-006918dcf667"/>
+        <activity android:configChanges="orientation" android:label="@string/app_name" android:name=".LaunchActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation" android:name="o.aiz" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="o.aiq" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation" android:name="o.ake" android:parentActivityName=".ui.main.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:launchMode="singleTask" android:name=".ui.broadcast.ViewerActivity" android:parentActivityName=".ui.main.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Camera">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.periscope.tv" android:pathPrefix="/w" android:scheme="https"/>
+                <data android:host="periscope.tv" android:pathPrefix="/w" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation" android:name="o.ajk" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation" android:name="o.aja" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation" android:name="o.ajd" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="o.aet" android:screenOrientation="portrait" android:theme="@style/AppTheme.Camera" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:name="o.adp" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name=".ui.main.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="o.ajj" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="o.adq" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="o.adi" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:excludeFromRecents="true" android:name="o.adh" android:screenOrientation="portrait"/>
+        <activity android:name="tv.periscope.android.ui.tweaks.HeartCompatActivity"/>
+        <activity android:name="tv.periscope.android.ui.tweaks.HeartActivity"/>
+        <activity android:name="tv.periscope.android.ui.tweaks.ChatsActivity"/>
+        <activity android:name="tv.periscope.android.ui.tweaks.TweaksActivity"/>
+        <receiver android:name=".push.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="tv.periscope.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.localytics.android.ReferralReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="o.acl"/>
+        <receiver android:name="o.acq"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="4a8d618f8becfd095f7d2f40def64af141aaee41"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_geo_api_key"/>
+        <activity android:label="RecyclerViewTestActivity" android:name="android.support.v7.widget.TestActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="o.mu"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/tw__transparent" android:label="@string/kit_name" android:name="o.nc"/>
+    </application>
+</manifest>

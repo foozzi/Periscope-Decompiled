@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="share_broadcast">
+        <item>@string/share_broadcast_subset_followers</item>
+        <item>@string/share_broadcast_all_followers</item>
+    </string-array>
+</resources>

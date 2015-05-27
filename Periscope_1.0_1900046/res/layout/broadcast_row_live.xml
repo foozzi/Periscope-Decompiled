@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/broadcast_live_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="220.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <o.alm android:id="@id/image_preview" android:background="@drawable/bg_card_live" android:layout_width="fill_parent" android:layout_height="148.0dip" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/info" android:background="@drawable/bg_card_bottom" android:padding="@dimen/standard_spacing_16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="147.0dip" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/thumb_container" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height">
+            <o.alm android:id="@id/avatar" android:layout_width="@dimen/feed_row_height" android:layout_height="@dimen/feed_row_height" android:scaleType="centerCrop" android:maskType="oval" />
+        </FrameLayout>
+        <o.ami android:textSize="16.0sp" android:textColor="@color/dark_grey" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/lock" android:layout_toRightOf="@id/thumb_container" android:layout_alignTop="@id/thumb_container" android:layout_marginStart="@dimen/standard_spacing_16" android:font="fonts/ProximaNova-Semibold.otf" />
+        <o.amc android:id="@id/lock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_private_small" android:layout_alignTop="@id/title" android:layout_alignParentRight="true" android:tint="@color/bg_feed_icon" />
+        <o.ami android:textSize="14.0sp" android:textColor="@color/light_grey" android:id="@id/author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_below="@id/title" android:layout_alignLeft="@id/title" android:font="fonts/MuseoSans-300.otf" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/participant_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/author" android:layout_alignParentRight="true">
+            <include layout="@layout/participant" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView android:background="@drawable/bg_card_live_overlay" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/live_location_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/standard_spacing_16">
+        <o.ami android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/live_label" android:background="@drawable/bg_live" android:padding="@dimen/label_padding" android:layout_width="wrap_content" android:layout_height="18.0dip" android:minWidth="40.0dip" android:text="@string/live" android:font="fonts/MuseoSans-700.otf" />
+        <o.ami android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/live_label" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" android:font="fonts/MuseoSans-500.otf" />
+    </RelativeLayout>
+</RelativeLayout>

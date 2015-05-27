@@ -1,0 +1,16 @@
+package o;
+
+public abstract interface ڔ<Z>
+{
+  public abstract Z get();
+  
+  public abstract int getSize();
+  
+  public abstract void recycle();
+}
+
+
+/* Location:           C:\Users\Dan\Documents\android\periscope\classes-dex2jar.jar
+ * Qualified Name:     o.Ú
+ * JD-Core Version:    0.7.0.1
+ */
